@@ -1,51 +1,37 @@
 ---
-layout: default
+layout: page
+title: Blogs
+icon: folder
 ---
-<div class="paper-home">
-  {% for post in paginator.posts %}
-    <div class="post">
-      <div class="header">
-        <h5 class="subheader">
-          {% assign d = post.date | date: "%d" | plus:'0' %}
-          {{ post.date | date: "%B" }}
-          {% case d %}
-          {% when 1 or 21 or 31 %}{{ d }}st,
-          {% when 2 or 22 %}{{ d }}nd,
-          {% when 3 or 23 %}{{ d }}rd,
-          {% else %}{{ d }}th,
-          {% endcase %}
-          {{ post.date | date: "%Y" }}
-        </h5>
-        <h1>{{ post.title }}</h1>
+
+<div class="mdl-grid categories">
+  {% for category in site.categories %}
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
+      <div class="mdl-card__title mdl-card--expand">
+        <h2 id="{{ category[0] | replace:' ','-' }}" class="mdl-card__title-text">{{ category[0] | capitalize }}</h2>
       </div>
-      {{ post.content | truncatewords:75}}
-      <a class="mdl-button mdl-button--accent" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">Read more</a>
+
+      <div class="mdl-card__menu">
+        <i class="material-icons mdl-badge" data-badge="{{ category[1].size }}">bookmark_border</i>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        {% assign pages_list = category[1] %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if group == null or group == node.group %}
+              <a class="mdl-button mdl-js-button mdl-js-ripple-effect" href="{{ node.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">
+                <span class="button-header">
+                  {{node.title}}
+                </span>
+                <span class="button-subheader">
+                  {{ node.date | date: "%B %d, %Y" }}
+                </span>
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+      </div>
     </div>
   {% endfor %}
-
-  <div class="mdl-grid pagination">
-    <div class="mdl-cell mdl-cell--4-col previous">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-          <a class="mdl-button mdl-button--primary" href="{{ site.baseurl }}{{ prepend: site.url}}">&larr; Newer</a>
-        {% else %}
-          <a class="mdl-button mdl-button--primary" href="{{ site.paginate_path | replace: ':num', paginator.previous_page | prepend: site.baseurl | prepend: site.url}}">&larr; Newer</a>
-        {% endif %}
-      {% else %}
-        <a class="mdl-button mdl-button--primary" disabled>&larr; Newer</a>
-      {% endif %}
-    </div>
-
-    <div class="mdl-cell mdl-cell--4-col indicator subheader">
-      Page {{ paginator.page }} / {{ paginator.total_pages }}
-    </div>
-
-    <div class="mdl-cell mdl-cell--4-col next">
-      {% if paginator.next_page %}
-        <a class="mdl-button mdl-button--primary" href="{{ site.paginate_path | replace: ':num', paginator.next_page | prepend: site.baseurl | prepend: site.url}}">Older &rarr;</a>
-      {% else %}
-        <a class="mdl-button mdl-button--primary" disabled>Older &rarr;</a>
-      {% endif %}
-    </div>
-  </div>
 </div>
