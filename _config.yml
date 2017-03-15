@@ -13,14 +13,14 @@ highlighter: pygments
 gems: [jekyll-paginate, jekyll-coffeescript]
 
 # comments
-disqus: # add disqus shortname here
+disqus: cwilko
 
 # author info
 # add your appropriate info here
 author: Chris Wilkinson
 bio: Software Engineer
 email: wilkobets@goolemail.com
-email_md5: # md5 hash of your email
+email_md5: 53a2811e11d37168db6ede33c0334870
 twitter_username: chr1swilkinson
 github_username: cwilko
 
