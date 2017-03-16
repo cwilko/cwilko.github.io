@@ -2,7 +2,7 @@
 layout: post
 title:  "How to create a blog"
 date:   2017-02-03 18:20:19
-categories: Tips&Hacks
+category: Tips & Hacks
 ---
 
 I want to create a blog.
@@ -13,7 +13,7 @@ However, I see this not only as a means of communicating my work efforts with ot
 
 So as a first post, here's how I went about creating this blog...
 
-First off - I am cheap. I don't want to pay for someone to host my blog. Neither do I want unnecessary adverts clogging up the pages. Therefore ideally I wanted to do something free, at the cost of getting my hands a little dirtier than usual. I don't need any fancy dynamic stuff here, just static pages, so after a little digging I found that [Github](https://github.com/) is an ideal hosting platform for such a site. Setting up a site on Github is as easy as creating a new repository, and giving it a certain name.. i.e. <Your Username>.github.io. 
+First off - I am cheap. I don't want to pay for someone to host my blog. Neither do I want unnecessary adverts clogging up the pages. Therefore ideally I wanted to do something free, at the cost of getting my hands a little dirtier than usual. I don't need any fancy dynamic stuff here, just static pages, so after a little digging I found that [Github](https://github.com/) is an ideal hosting platform for such a site. Setting up a site on Github is as easy as creating a new repository, and giving it a certain name.. i.e. [Your Username].github.io. 
 
 Easy!
 
@@ -33,7 +33,7 @@ I`m picky about my colour schemes, but finally decided on [Paper Theme](https://
 
 The complete set of instructions to start blogging RIGHT NOW are :
 
-- Fork the [repo](https://github.com/dbtek/paper).
+- Fork the [repository](https://github.com/dbtek/paper).
 - Rename forked repo as `username.github.io`.
 - Add your blog name and details by editing `_config.yml`.
 - Write some posts!
