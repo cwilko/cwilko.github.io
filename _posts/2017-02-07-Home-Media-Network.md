@@ -10,7 +10,7 @@ My wife and I moved into our house about five years ago, afer which we had two k
 Around that time, I visualised something like the following diagram. My Holy Grail of a home media network, providing the flexibility to bring any content to any room or device in the house. Today the implementation of this diagram is a reality and was a major step on my "Smart Home" journey...
 
 
-![Home Automation Network Diagram](/assets/images/home-media.png)
+<center><img src="/assets/images/home-media.png" width="80%"></center>
 
 ## Overview
 
@@ -70,11 +70,12 @@ The details of creating this customised UI are best left for a follow up post, b
 The screenshots below give you an idea what you see, no matter which TV you turn on in the house:
 
 
-<img src="/assets/images/Screenshot_2017-03-16-22-34-55.png" width="500"> <img src="/assets/images/Screenshot_2017-03-16-22-36-09.png" width="500">
-<img src="/assets/images/Screenshot_2017-03-16-22-55-52.png" width="500"> <img src="/assets/images/Screenshot_2017-03-16-22-35-10.png" width="500">
-<img src="/assets/images/Screenshot_2017-03-16-22-37-31.png" width="500"> <img src="/assets/images/Screenshot_2017-03-16-22-57-54.png" width="500">
-<img src="/assets/images/Screenshot_2017-03-16-22-37-44.png" width="500"> <img src="/assets/images/Screenshot_2017-03-16-22-52-39.png" width="500">
-
+<center>
+<img src="/assets/images/Screenshot_2017-03-16-22-34-55.png" width="40%"> <img src="/assets/images/Screenshot_2017-03-16-22-36-09.png" width="40%">
+<img src="/assets/images/Screenshot_2017-03-16-22-55-52.png" width="40%"> <img src="/assets/images/Screenshot_2017-03-16-22-35-10.png" width="40%">
+<img src="/assets/images/Screenshot_2017-03-16-22-37-31.png" width="40%"> <img src="/assets/images/Screenshot_2017-03-16-22-57-54.png" width="40%">
+<img src="/assets/images/Screenshot_2017-03-16-22-37-44.png" width="40%"> <img src="/assets/images/Screenshot_2017-03-16-22-52-39.png" width="40%">
+</center>
 
 ## Easy & Automated control of devices
 
