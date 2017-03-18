@@ -14,12 +14,12 @@ Around that time, I visualised something like the following diagram. My Holy Gra
 
 ## Overview
 
-Here are some of the cool things that can be done on my Home Media network:
+Here are some of the cool things that can be done on such a Home Media network:
 
-- Play any DVD/CD from my collection on any TV/Tablet
-- Play streamed services, such as Netflix/Spotify, on any TV/Tablet
+- Play any movie/song from a local media library on any TV/Tablet
+- Play streamed services, such as Netflix/Spotify (requires paid subscription), on any TV/Tablet
 - Access the EPG, play and record any Free To Air Satelite TV Channels, on any TV/Tablet
-- Play a wide selection of ROMs on any TV
+- Play a selection of games on any TV
 - Turn on/off selected TVs, Adjust volume, switch to selected channels, using voice commands.
 - Turn on/off selected TVs, full control of all content, using a mobile phone.
 - Use a single remote control, to control multple devices on the main Lounge screen.
@@ -30,13 +30,13 @@ Sound good? Well lets go through the key requirements of such a network and thei
 
 My main goal was to have the ability to receive media content on any TV in the house, without destroying half the house doing so. We have an old property with solid walls, and I`m not a fan of visible cables, boxes, trunking, etc. The obvious area for investigation therefore became content over WiFi.
 
-Another goal was to spend as little money as possible. Commercial options like... well Sky Q is the only option I can think of... were way out. Also I wasn't about to go out a buy a bunch of new TVs, so any solution had to work with an existing set of devices.
+Another goal was to spend as little money as possible. I wasn't about to go out a buy a bunch of new TVs, so any solution had to work with an existing set of devices.
 
 I had two topologies in my head, either a "star topology" network, where all content was transmitted from a central source, and devices were just dumb terminals which received the signal - or - a client on each TV which had the logic to receive/process/control content. The first option would require some super-server which could process incoming control signals, and have the power to stream content to potentially many destinations. The latter option was a more scalable approach, but pushed complexity and cost to the devices. 
 
 As usual, the decision was based on what was possible with cheap and available hardware/software... and at this point I introduce [Kodi](https://kodi.tv/about/) (Free Software) running on [Amazon Fire Stick](https://www.amazon.co.uk/Amazon-Fire-TV-Stick-Streaming-Media-Player/dp/B00KAKUN3E/ref=sr_1_2?s=digital-text&ie=UTF8&qid=1489701795&sr=1-2&keywords=firestick) (£30 Hardware).
 
-Kodi is Media Centre software, designed for the big screen. It essentially presents you with a customisable UI, which you can use to select and control playback of many different types of content. Kodi has an ecosystem of plugins (called Add-Ons) which allow interfacing with content from many different sources. So for example... DVD ISO images, MP3 collections, Internet Streamed movies/tv, TV via an appropriate networked receiver, PVR Recordings, Photos... the list goes on.
+Kodi is Media Centre software, designed for the big screen. It essentially presents you with a customisable UI, which you can use to select and control playback of many different types of content. Kodi has an ecosystem of plugins (called Add-Ons) which allow interfacing with content from many different sources. So for example... ISO images, MP3 collections, Internet Streamed movies/tv services, TV via an appropriate networked receiver, PVR Recordings, Photos... the list goes on.
 
 Kodi is available on a number of platforms, including [Android](https://en.wikipedia.org/wiki/Android_(operating_system)). Any android device - tablets, phones, tvs, etc - can install Kodi and instantly solve the main problem of receiving content anywhere. How to turn an old tv into an Android TV? An Amazon Firestick! The Firestick is a pseudo-Android device in that Amazon have done their best to avoid allowing users to install their own apps. However, there is an easy way to sideload applications, including Kodi. The firestick is a tiny and cheap device, it fits snugly behind a tv, and if you`re lucky you can even power it off an available USB slot on newer TVs.
 
@@ -51,7 +51,7 @@ The latter of these problems was the easiest to solve. I made an investment in a
 
 To address the pain of adding a new stick, I wanted to create a Kodi "Image" that I could roll out across all new sticks. Luckily there is a Kodi [Backup Add-On](http://kodi.wiki/view/add-on:backup) which means that, once configured, an entire image of the installation can be saved out to the NAS. With this, we can simply add a new stick, install kodi, refresh from the backup, and we're done. It takes me about 5 mins to set up a new stick.
 
-What we don't want in this backup are Kodi thumbnails. Thumbnails are small images that are auto generated for each movie, dvd, song, artist, album, etc - which Kodi uses as part of it's user interface. These are often pulled in from various internet sources. Over time, and with a lot of content, the libray of thumbnails can grow hugely and become a large part of storage on the stick. Adding a new stick also requires generation of these thumbnails which can mean waiting several hours for the library to be created. Luckily, Kodi has the ability to load these thumbnails in from a central source, a [MySQL database](https://www.mysql.com/) to be exact. A MySQL service running in a [Docker](https://www.docker.com/) container was therefore added to a new [Raspberry Pi Home Server](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (which incidentally is also a Kodi device attached to a TV). Now *all* TVs/Devices in the house pull their thumbnails directly from this server. No more library rebuilds, No more inconsistent thumbnails across devices. Every device shows the same content, in the same way.
+What we don't want in this backup are Kodi thumbnails. Thumbnails are small images that are auto generated for each movie, song, artist, album, etc - which Kodi uses as part of it's user interface. These are often pulled in from various internet sources. Over time, and with a lot of content, the libray of thumbnails can grow hugely and become a large part of storage on the stick. Adding a new stick also requires generation of these thumbnails which can mean waiting several hours for the library to be created. Luckily, Kodi has the ability to load these thumbnails in from a central source, a [MySQL database](https://www.mysql.com/) to be exact. A MySQL service running in a [Docker](https://www.docker.com/) container was therefore added to a new [Raspberry Pi Home Server](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) (which incidentally is also a Kodi device attached to a TV). Now *all* TVs/Devices in the house pull their thumbnails directly from this server. No more library rebuilds, No more inconsistent thumbnails across devices. Every device shows the same content, in the same way.
 
 ## Unified User Interface on all devices
 
