@@ -57,7 +57,7 @@ The above snippet loads in a JSON configuration file, which contains the variabl
 
 For example, the JSON file may contain the following data :
 
-```
+```json
 "datasets": [
 				{
 					"name":"WallSt-5min",
@@ -84,7 +84,7 @@ For example, the JSON file may contain the following data :
 
 Here are some example snippet of the operations that we apply to the raw data :
 
-```
+```python 
 ##
 ## Crop - take a Pandas timeseries dataframe and returns a time cropped dataframe.
 ##
@@ -94,9 +94,7 @@ def cropDate(data, start, end):
 
 def cropTime(data, start, end):
     return data.between_time(start, end, include_start=True, include_end=False)
-```
 
-```
 ##
 ## Localise - take a GMT pandas timeseries dataframe and convert to a given timezone
 ##
@@ -112,7 +110,7 @@ Specifically for Machine Learning problems, We can create operations for normali
 
 Here are some more example snippets :
 
-```
+```python 
 ##
 ## Normalise (Candlesticks)
 ## Take a Pandas DF of data where each row is training example, e.g. a sequence of 5 min data between 9am and 10am, and output
@@ -125,8 +123,7 @@ def normaliseCandlesticks(data):
     scale = Xmax - Xmin
     X = (X - Xmin) / scale
     return pandas.DataFrame(numpy.hstack((X,scale / numpy.nanmax(scale))))
-```
-```
+
 ##
 ## Split (Train/Val/Test)
 ## Tale a Pandas DF of data and split into proportions given by the parameters.
