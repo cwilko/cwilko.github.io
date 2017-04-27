@@ -5,6 +5,12 @@ date:   2017-04-03 18:20:19
 category: Tips & Hacks
 ---
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@cwilko" />
+<meta name="twitter:title" content="Installing NVIDIA drivers for CUDA on Optimus/Ubuntu" />
+<meta name="twitter:description" content="Optimus enabled machines allow switching between the Intel display interface and a secondary NVIDIA graphics card. This is usually a technology on Laptops, particularly Lenovo machines. Using the NVIDIA card, with it's higher power usage, is usually overkill for displaying a standard Ubuntu OS GUI." />
+<meta name="twitter:image" content="http://4.bp.blogspot.com/-VDS8jE22rDU/UR5x3uSOfhI/AAAAAAAAAW8/kFnf5umSvBA/s1600/optim.png" />
+
 # The Problem
 
 [Optimus](https://en.wikipedia.org/wiki/Nvidia_Optimus) enabled machines allow switching between the Intel display interface and a secondary NVIDIA graphics card. This is usually a technology on Laptops, particularly Lenovo machines. Using the NVIDIA card, with it's higher power usage, is usually overkill for displaying a standard Ubuntu OS GUI. This is just as well because installing the NVIDIA drivers on Ubuntu/Optimus has a minefield of issues. Most times, the user will install the NVIDIA drivers only to find themselves confronted by the Black Screen of death on reboot, or an endless login loop. There are additional technologies which aim to ease the balancing of two display drivers, e.g. [Bumblebee](https://bumblebee-project.org/). However, this just adds to the complexity of the situation.

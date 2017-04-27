@@ -5,6 +5,12 @@ date:   2017-02-07 18:20:19
 category: Home Automation
 ---
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@cwilko" />
+<meta name="twitter:title" content="Home of the Future - Part I : Media Network" />
+<meta name="twitter:description" content="Here we map out the components of a Home Media Network. " />
+<meta name="twitter:image" content="http://www.pc-magazin.de/bilder/447505/500x300-c2/Kodi-Logo.jpg" />
+
 My wife and I moved into our house about five years ago, afer which we had two kids. The demands on our TV/Media consumption therefore increased significantly. For most of these years we made do with trailing co-ax cables through the house to the master bedroom, sending a poor mirrored signal from a sky box on the lounge TV to the bedroom, but last year I decided my days of living in a One-TV household were numbered.
 
 Around that time, I visualised something like the following diagram. My Holy Grail of a home media network, providing the flexibility to bring any content to any room or device in the house. Today the implementation of this diagram is a reality and was a major step on my "Smart Home" journey...
