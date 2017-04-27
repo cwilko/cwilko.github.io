@@ -5,6 +5,12 @@ date:   2017-03-01
 category: Quant Finance
 ---
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@cwilko" />
+<meta name="twitter:title" content="A Financial Data pipeline in Python" />
+<meta name="twitter:description" content="Arguably the most important step in any data science or machine learning task is the preparation of the data. Taking the raw data and and turning it into a set of features, in a particular format that a algorithm can work with is, is crucial to getting accurate and optimal results." />
+<meta name="twitter:image" content="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAbRAAAAJDFhZGMyZjhmLWZlM2QtNDkzYS04ZGVlLWY0ZGRlOWZkOTVkNA.png" />
+
 # Preparing Data
 
 Arguably the most important step in any data science or machine learning task is the preparation of the data. Taking the raw data and and turning it into a set of "features", in a particular format that a algorithm can work with is, is crucial to getting accurate and optimal results.

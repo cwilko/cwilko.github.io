@@ -5,6 +5,12 @@ date:   2017-02-28
 category: Home Automation
 ---
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@cwilko" />
+<meta name="twitter:title" content="Turn a dedicated Kodi box into a Home Server using Docker" />
+<meta name="twitter:description" content="Wouldn't it be great if we didn't have to tie up a whole Raspberry Pi with a dedicated Kodi installation, but also have the ability to run some additional services. In other words, can we turn our Kodi box into a Home Server as well?" />
+<meta name="twitter:image" content="http://www.pc-magazin.de/bilder/447505/500x300-c2/Kodi-Logo.jpg" />
+
 # The Problem 
 
 Running [OpenELEC](http://openelec.tv/)/[LibreELEC](https://libreelec.tv/) on a Raspberry Pi is a great way to get a minimum footprint [Kodi](https://kodi.tv/) box, with all the necessary OS performance tuning ready out of the box. However, wouldn't it be great if we didn't have to tie up a whole Raspberry Pi in this way, but also have the ability to run some additional services. In other words, can we turn our Kodi box into a Home Server as well?
