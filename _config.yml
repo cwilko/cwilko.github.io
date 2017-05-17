@@ -3,14 +3,14 @@ title: wilko#hack
 description: > # this means to ignore newlines until "baseurl:"
   Quant Finance, Home Automation, and general hacks...
 baseurl: "/" # the subpath of your site, e.g. /blog/
-#url: "https://cwilko.github.com" # the base hostname & protocol for your site you most probably don't need to set it
+url: "https://cwilko.github.com" # the base hostname & protocol for your site you most probably don't need to set it
 
 # Build settings
 markdown: kramdown
 paginate: 5 # pagination based on number of posts
 paginate_path: "page/:num"
 highlighter: pygments
-gems: [jekyll-paginate, jekyll-coffeescript]
+gems: [jekyll-paginate, jekyll-coffeescript, jekyll-seo-tag]
 
 # comments
 disqus: cwilko
@@ -23,6 +23,14 @@ email: wilkobets@goolemail.com
 email_md5: 53a2811e11d37168db6ede33c0334870
 twitter_username: chr1swilkinson
 github_username: cwilko
+twitter:
+  username: cwilko
+social:
+  name: Chris Wilkinson
+  links:
+    - https://twitter.com/chr1swilkinson
+    - https://www.linkedin.com/in/chris-wilkinson-a3979234
+    - https://github.com/cwilko
 
 # Theming options
 # These settings are mandatory.
