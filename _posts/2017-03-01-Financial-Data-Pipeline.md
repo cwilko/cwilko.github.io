@@ -147,7 +147,7 @@ Getting the pre-processing step right is cruicial in ensuring we have a clean se
 
 It is conceivable that the pipeline library could be extended to not only include pre-processing tasks, but also data analysis tasks such as linear regression, logistic regression, neural networks, etc.
 
-All the code, and more, can be found in a [Jupyter notebook](https://github.com/cwilko/Notebooks/blob/master/Dataset_Pipeline.ipynb) on my github pages.
+All the code, and more, can be found in a [Jupyter notebook](https://github.com/cwilko/quantutils/blob/master/examples/Dataset_Pipeline.ipynb) on my github pages.
 
 
 
