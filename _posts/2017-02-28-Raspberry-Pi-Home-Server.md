@@ -56,7 +56,7 @@ The last useful thing we need to do to in order to set up Docker is to have the 
 Your file should then contain something like the following :
 
 ```
-	ExecStart=/storage/.kodi/addons/service.system.docker/bin/dockerd **-H tcp://0.0.0.0:2375** --exec-opt native.cgroupdriver=systemd \
+	ExecStart=/storage/.kodi/addons/service.system.docker/bin/dockerd -H tcp://0.0.0.0:2375 --exec-opt native.cgroupdriver=systemd \
                                                                   --log-driver=journald \
                                                                   --group=root \
                                                                   $DOCKER_DAEMON_OPTS \
@@ -68,7 +68,7 @@ After this you should reboot.
 You can test everything is working by SSHing into the Raspberry Pi and entering the following to install a helloworld docker image :
 
 ```bash
-	$ docker run hello-world
+	$ docker -H 0.0.0.0:2375 run hello-world
 
 	Hello from Docker!
 	This message shows that your installation appears to be working correctly.
